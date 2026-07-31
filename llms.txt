@@ -1,0 +1,28 @@
+# Vocablo
+
+> Vocablo is a native iPhone, iPad, and Mac app that teaches Mexican Spanish
+> vocabulary through Home Screen, Lock Screen, and desktop widgets, backed by
+> practice games, streaks, and on-device Apple Intelligence conversation
+> practice. No account required; everything runs on device.
+
+## Key facts
+
+- Platforms: iOS 17+, iPadOS 17+, macOS 14+ (fully native, SwiftUI).
+- Widgets: iPhone Home Screen and Lock Screen, iPad Home Screen, Mac desktop.
+  Multiple widgets can run side by side, each rotating a different topic.
+- Dictionary: 550+ curated, frequency-graded words and phrases tuned to
+  conversational Mexican Spanish, organized into 13 topics.
+- Practice: Matching, Type the Word, El o La (grammatical gender), and an
+  Apple Intelligence conversation mode with per-turn coaching — all on-device.
+- Pronunciation: system speech synthesizer with a Mexican Spanish voice.
+- Privacy: no accounts, no ads, no tracking, no backend. Optional sync across
+  devices uses the user's personal iCloud.
+- Pricing: free tier (beginner words, four starter topics). Vocablo Plus
+  unlocks all 13 topics, every difficulty, and iCloud sync — $2.99/month or
+  $14.99/year with a one-week free trial.
+- Developer: Luke Hollenback (solo, independent).
+
+## Links
+
+- Homepage: https://getvocablo.com/
+- App Store: https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871

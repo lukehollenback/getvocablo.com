@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vocablo — Mexican Spanish Vocabulary Widgets for iPhone, iPad &amp; Mac</title>
+<meta name="description" content="Learn Mexican Spanish passively with vocabulary widgets on your Home Screen, Lock Screen, and Mac desktop. 550+ curated conversational words, practice games, and on-device Apple Intelligence conversations. No account, fully private.">
+<link rel="canonical" href="https://getvocablo.com/">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon.svg">
+<meta name="apple-itunes-app" content="app-id=6790215871">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vocablo">
+<meta property="og:title" content="Vocablo — Mexican Spanish Vocabulary Widgets for iPhone, iPad &amp; Mac">
+<meta property="og:description" content="Learn Mexican Spanish passively with widgets on your Home Screen, Lock Screen, and Mac desktop. Practice games, on-device Apple Intelligence, no account required.">
+<meta property="og:url" content="https://getvocablo.com/">
+<meta property="og:image" content="https://getvocablo.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vocablo app screenshots showing Mexican Spanish vocabulary, widgets, and conversation practice">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vocablo — Mexican Spanish Vocabulary Widgets">
+<meta name="twitter:description" content="Learn Mexican Spanish passively with widgets on iPhone, iPad, and Mac. Fully on-device, no account required.">
+<meta name="twitter:image" content="https://getvocablo.com/assets/og-image.jpg">
+
+<!-- Structured data: the app -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Vocablo",
+  "operatingSystem": "iOS 17.0 or later, iPadOS 17.0 or later, macOS 14.0 or later",
+  "applicationCategory": "EducationApplication",
+  "applicationSubCategory": "Language Learning",
+  "description": "Vocablo puts Mexican Spanish vocabulary widgets on the iPhone Home Screen and Lock Screen, the iPad Home Screen, and the Mac desktop. It teaches 550+ curated, frequency-graded conversational Mexican Spanish words with practice games, streaks, and on-device Apple Intelligence conversation practice. No account required; all learning happens on device.",
+  "url": "https://getvocablo.com/",
+  "downloadUrl": "https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871",
+  "sameAs": ["https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871"],
+  "image": "https://getvocablo.com/assets/og-image.jpg",
+  "author": { "@type": "Person", "name": "Luke Hollenback" },
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Beginner words across four starter topics, with widgets and practice games." },
+    { "@type": "Offer", "name": "Vocablo Plus Monthly", "price": "2.99", "priceCurrency": "USD", "description": "All 13 topics, every difficulty level, and iCloud sync across devices." },
+    { "@type": "Offer", "name": "Vocablo Plus Annual", "price": "14.99", "priceCurrency": "USD", "description": "All 13 topics, every difficulty level, and iCloud sync across devices. One-week free trial." }
+  ]
+}
+</script>
+
+<!-- Structured data: FAQ (mirrors the visible FAQ section) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Vocablo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vocablo is a native iPhone, iPad, and Mac app that teaches Mexican Spanish vocabulary through Home Screen, Lock Screen, and desktop widgets, backed by practice games, streaks, and on-device Apple Intelligence conversation practice." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Vocablo free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier includes beginner words across four starter topics, with widgets and practice games. Vocablo Plus ($2.99/month or $14.99/year with a one-week free trial) unlocks all 13 topics, every difficulty level, and iCloud sync across devices." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Mexican Spanish different from other Spanish?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vocabulary, slang, and everyday phrasing differ meaningfully across Spanish-speaking regions. Vocablo's dictionary is curated specifically for conversational Mexican Spanish — including famously elastic words like 'ahorita' — rather than generic textbook Spanish." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Vocablo work offline?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The dictionary ships inside the app, Apple Intelligence conversation practice runs on-device, and pronunciation uses the system speech synthesizer. No network connection or account is required." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data private?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Vocablo has no accounts, no ads, and no tracking. Learning progress stays on your device, and optional cross-device sync uses your personal iCloud." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which devices does Vocablo support?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Vocablo runs natively on iPhone and iPad (widgets on the Home Screen and Lock Screen) and on Mac (widgets on the desktop). Progress syncs across all three via iCloud for Vocablo Plus subscribers." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --brand:#ff2548;
+  --brand-soft:#ff5570;
+  --ink:#1d1d1f;
+  --ink-2:#515154;
+  --bg:#ffffff;
+  --bg-2:#f5f5f7;
+  --card:#ffffff;
+  --line:rgba(0,0,0,.08);
+  --radius:18px;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#f5f5f7;
+    --ink-2:#a1a1a6;
+    --bg:#0b0b0d;
+    --bg-2:#161618;
+    --card:#1d1d20;
+    --line:rgba(255,255,255,.1);
+  }
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  color:var(--ink);background:var(--bg);line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+img,video{max-width:100%;height:auto;display:block}
+a{color:var(--brand);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+header.site{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.15rem;color:var(--ink)}
+.logo img{width:34px;height:34px;border-radius:8px}
+nav.site a{color:var(--ink-2);margin-left:18px;font-size:.95rem}
+nav.site a:hover{color:var(--brand)}
+nav.site a.cta,nav.site a.cta:hover{color:#fff}
+@media(max-width:640px){nav.site a:not(.cta){display:none}}
+
+.btn{
+  display:inline-block;background:var(--brand);color:#fff;font-weight:600;
+  padding:12px 24px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,37,72,.35)}
+.btn.small{padding:8px 18px;font-size:.9rem}
+.btn.ghost{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+
+.hero{
+  text-align:center;padding:56px 0 40px;
+  background:
+    radial-gradient(1200px 500px at 50% -10%, rgba(255,37,72,.14), transparent 70%),
+    var(--bg);
+}
+.hero h1{
+  font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.12;letter-spacing:-.02em;font-weight:800;
+}
+.hero h1 em{font-style:normal;color:var(--brand)}
+.hero p.sub{
+  max-width:640px;margin:18px auto 0;color:var(--ink-2);
+  font-size:clamp(1.05rem,2.2vw,1.25rem);
+}
+.hero .actions{margin:28px 0 8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero .platforms{color:var(--ink-2);font-size:.9rem;margin-top:10px}
+.hero-video{
+  margin:40px auto 0;max-width:960px;border-radius:var(--radius);overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.18);border:1px solid var(--line);
+  line-height:0;font-size:0;
+}
+.hero-video video{width:100%;height:auto}
+
+section{padding:64px 0}
+section.alt{background:var(--bg-2)}
+h2{font-size:clamp(1.5rem,3.5vw,2.2rem);letter-spacing:-.01em;line-height:1.2;margin-bottom:10px}
+p.lead{color:var(--ink-2);max-width:640px;font-size:1.05rem;margin-bottom:32px}
+
+.split{display:grid;gap:36px;grid-template-columns:1fr 1fr;align-items:center}
+@media(max-width:800px){
+  .split{grid-template-columns:1fr}
+  .split>img{order:1}
+}
+.split img{border-radius:var(--radius);border:1px solid var(--line);box-shadow:0 16px 40px rgba(0,0,0,.12)}
+img.phone{width:100%;max-width:300px;margin-inline:auto}
+.hero-split{text-align:left;margin-top:64px}
+.chips-title{font-size:1rem;margin:22px 0 10px}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{
+  background:var(--card);border:1px solid var(--line);border-radius:999px;
+  padding:5px 13px;font-size:.86rem;color:var(--ink-2);white-space:nowrap;
+}
+.promo{margin-top:18px;border-top:1px dashed var(--line);padding-top:16px}
+.promo .btn{display:block;text-align:center;padding:11px 18px;font-size:.95rem}
+.checklist{list-style:none;margin-top:16px}
+.checklist li{padding-left:30px;position:relative;margin-bottom:12px;color:var(--ink-2)}
+.checklist li::before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
+.checklist li strong{color:var(--ink)}
+
+.pricing{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:860px}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.price-card.featured{border-color:var(--brand);box-shadow:0 12px 36px rgba(255,37,72,.16)}
+.price-card .price{font-size:2rem;font-weight:800;margin:6px 0}
+.price-card .price span{font-size:.95rem;font-weight:400;color:var(--ink-2)}
+.price-card ul{list-style:none;margin:14px 0 0}
+.price-card li{color:var(--ink-2);font-size:.93rem;padding:4px 0}
+.badge{display:inline-block;background:var(--brand);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 10px;margin-bottom:8px}
+
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details summary{cursor:pointer;font-weight:600;font-size:1.02rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::after{content:"+";color:var(--brand);font-size:1.3rem;font-weight:400}
+details[open] summary::after{content:"–"}
+details p{color:var(--ink-2);margin-top:10px;max-width:720px}
+
+footer.site{padding:48px 0;color:var(--ink-2);font-size:.9rem}
+footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site">
+    <a class="logo" href="/"><img src="assets/icon.svg" alt="Vocablo app icon" width="34" height="34">Vocablo</a>
+    <nav class="site" aria-label="Primary">
+      <a href="#widgets">Widgets</a>
+      <a href="#practice">Practice</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn small cta" href="https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871">Download</a>
+    </nav>
+  </header>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <h1>Learn <em>Mexican Spanish</em>,<br>one glance at a time.</h1>
+      <p class="sub">Vocablo puts real, conversational Mexican Spanish vocabulary on your iPhone Home Screen, Lock Screen, iPad, and Mac desktop — so you learn passively, all day, without opening an app.</p>
+      <div class="actions">
+        <a class="btn" href="https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871">Download on the App Store</a>
+        <a class="btn ghost" href="#widgets">See how it works</a>
+      </div>
+      <p class="platforms">Free to start · iPhone, iPad &amp; Mac · No account required</p>
+      <div class="hero-video">
+        <video autoplay muted loop playsinline preload="metadata" poster="assets/video-poster.webp" width="1280" height="720" aria-label="Scrolling tour of Vocablo's app screens: learning words, widgets, on-device AI conversations, topics, examples, and practice games">
+          <source src="assets/scroll-loop.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="split hero-split" id="widgets">
+        <img class="phone" src="assets/ios-2.webp" alt="Vocablo vocabulary widgets on an iPhone: a Home Screen widget showing the Mexican Spanish word 'ahorita' with its meaning and example, and a Lock Screen widget showing 'para'" width="640" height="1391" loading="lazy">
+        <div>
+          <h2>Vocabulary widgets, everywhere you look.</h2>
+          <p class="lead" style="margin-bottom:0">Widgets make learning ambient. A new word — with its meaning, an example, and cultural notes a tap away — meets you at a glance all day long.</p>
+          <ul class="checklist">
+            <li><strong>iPhone Home Screen &amp; Lock Screen.</strong> Full-size widgets plus compact accessory widgets keep Spanish in view from your first glance of the morning.</li>
+            <li><strong>Mac desktop.</strong> Vocabulary sits beside your work — Vocablo is a fully native Mac app, not a port.</li>
+            <li><strong>Multiple widgets, side by side.</strong> Each one rotates through a different topic you're studying.</li>
+            <li><strong>Synced by iCloud.</strong> Your streak, learned words, and settings follow you across iPhone, iPad, and Mac.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="mexican-spanish">
+    <div class="wrap split">
+      <div>
+        <h2>Real Mexican Spanish, not textbook Spanish.</h2>
+        <p class="lead" style="margin-bottom:0">Most Spanish apps teach a generic, region-less Spanish. Vocablo's dictionary is different:</p>
+        <ul class="checklist">
+          <li><strong>550+ curated words and phrases</strong>, hand-picked for everyday conversation in Mexico.</li>
+          <li><strong>Frequency-graded difficulty</strong> — you learn the words people actually say first, ordered by real-world usage.</li>
+          <li><strong>Cultural nuance included</strong> — like why "ahorita" can mean right now, in an hour, or politely never.</li>
+          <li><strong>Native pronunciation</strong> with a Mexican Spanish voice, spoken on demand.</li>
+        </ul>
+        <h3 class="chips-title">13 practical topics:</h3>
+        <ul class="chips">
+          <li>🔤 Essentials</li><li>🎨 Colors &amp; Numbers</li><li>🏠 Daily Life</li><li>🍽️ Food &amp; Drink</li><li>✈️ Travel &amp; Directions</li><li>👥 Family &amp; Relationships</li><li>🧠 Emotions &amp; Mind</li><li>💼 Work &amp; Money</li><li>❤️ Body &amp; Health</li><li>📅 Time &amp; Calendar</li><li>🌤️ Nature &amp; Weather</li><li>💬 Social Phrases</li><li>🇲🇽 Mexican Spanish</li>
+        </ul>
+      </div>
+      <img class="phone" src="assets/ios-5.webp" alt="Vocablo word detail screen for the Mexican Spanish word 'ahorita', showing its definition, example sentence, and a cultural usage note" width="640" height="1391" loading="lazy">
+    </div>
+  </section>
+
+  <section id="practice">
+    <div class="wrap split">
+      <img class="phone" src="assets/ios-6.webp" alt="Matching practice game pairing Spanish words like 'rojo' and 'verde' with their English meanings" width="640" height="1391" loading="lazy">
+      <div>
+        <h2>Practice that actually sticks.</h2>
+        <p class="lead" style="margin-bottom:0">Games and streaks turn passive exposure into recall, built from the very words your widgets have been showing you all day.</p>
+        <ul class="checklist">
+          <li><strong>Matching, Type the Word &amp; El o La.</strong> Quick, focused rounds that build recall — including grammatical gender practice.</li>
+          <li><strong>Streaks &amp; automatic progression.</strong> Daily practice streaks and curriculum advancement keep you moving from beginner words toward natural vocabulary.</li>
+          <li><strong>Learn, favorite &amp; share.</strong> Mark words learned or favorited as you go, and share beautiful vocab cards with the friends you're learning for.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="apple-intelligence">
+    <div class="wrap split">
+      <div>
+        <h2>Your on-device conversation partner.</h2>
+        <p class="lead" style="margin-bottom:0">Vocablo uses Apple Intelligence to make practice feel like talking to a person — without a single byte leaving your device.</p>
+        <ul class="checklist">
+          <li><strong>Chat in Spanish with Sofía</strong>, a conversation partner who meets you at your level.</li>
+          <li><strong>Per-turn coaching</strong> — every reply is scored, with concrete suggestions and points for using the words you've learned.</li>
+          <li><strong>Faithful translations</strong> under every message, so you always know what was said.</li>
+          <li><strong>Fresh example sentences on demand</strong> for any word in the dictionary, written on-device.</li>
+          <li><strong>Entirely offline.</strong> Conversations run on the Apple Intelligence model built into your device — never a server.</li>
+        </ul>
+      </div>
+      <img class="phone" src="assets/ios-3.webp" alt="On-device Apple Intelligence conversation practice in Spanish: chatting with Sofía, with per-turn coaching, points, and English translations" width="640" height="1391" loading="lazy">
+    </div>
+  </section>
+
+  <section id="mac">
+    <div class="wrap split">
+      <img class="phone" src="assets/ios-1.webp" alt="Vocablo home screen showing learning progress: 34 words learned, practice streak, and the games list — with no account or sign-in anywhere" width="640" height="1391" loading="lazy">
+      <div>
+        <h2>Private by architecture.</h2>
+        <ul class="checklist">
+          <li><strong>No account. No sign-up.</strong> Download and start learning.</li>
+          <li><strong>No ads, no tracking, no analytics backend.</strong> There is no server to send your data to.</li>
+          <li><strong>On-device AI.</strong> Conversation practice and example generation use Apple Intelligence locally — your chats never leave your device.</li>
+          <li><strong>Works fully offline.</strong> The dictionary, games, and pronunciation all ship inside the app.</li>
+          <li><strong>Accessible.</strong> Spanish content is language-tagged, so VoiceOver and Spoken Content pronounce it with a proper Spanish voice.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="pricing">
+    <div class="wrap">
+      <h2>Simple pricing.</h2>
+      <p class="lead">Start free. Upgrade when you want the full curriculum.</p>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <ul>
+            <li>Beginner words in four starter topics</li>
+            <li>Home Screen, Lock Screen &amp; desktop widgets</li>
+            <li>Practice games &amp; streaks</li>
+          </ul>
+        </div>
+        <div class="price-card featured">
+          <span class="badge">Most popular</span>
+          <h3>Vocablo Plus</h3>
+          <p class="price">$14.99<span>/year</span></p>
+          <ul>
+            <li>One-week free trial</li>
+            <li>All 13 topics, every difficulty</li>
+            <li>iCloud sync across iPhone, iPad &amp; Mac</li>
+            <li>Also available at $2.99/month</li>
+          </ul>
+          <div class="promo" id="promo" hidden data-code="2PARANUEVOS" data-expires="2026-12-31">
+            <a class="btn" id="promo-link" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6790215871&amp;code=">🎁 Redeem 2 months free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Frequently asked questions.</h2>
+      <details>
+        <summary>What is Vocablo?</summary>
+        <p>Vocablo is a native iPhone, iPad, and Mac app that teaches Mexican Spanish vocabulary through Home Screen, Lock Screen, and desktop widgets, backed by practice games, streaks, and on-device Apple Intelligence conversation practice.</p>
+      </details>
+      <details>
+        <summary>Is Vocablo free?</summary>
+        <p>Yes. The free tier includes beginner words across four starter topics, with widgets and practice games. Vocablo Plus ($2.99/month or $14.99/year with a one-week free trial) unlocks all 13 topics, every difficulty level, and iCloud sync across devices.</p>
+      </details>
+      <details>
+        <summary>How is Mexican Spanish different from other Spanish?</summary>
+        <p>Vocabulary, slang, and everyday phrasing differ meaningfully across Spanish-speaking regions. Vocablo's dictionary is curated specifically for conversational Mexican Spanish — including famously elastic words like "ahorita" — rather than generic textbook Spanish.</p>
+      </details>
+      <details>
+        <summary>Does Vocablo work offline?</summary>
+        <p>Yes. The dictionary ships inside the app, Apple Intelligence conversation practice runs on-device, and pronunciation uses the system speech synthesizer. No network connection or account is required.</p>
+      </details>
+      <details>
+        <summary>Is my data private?</summary>
+        <p>Yes. Vocablo has no accounts, no ads, and no tracking. Learning progress stays on your device, and optional cross-device sync uses your personal iCloud.</p>
+      </details>
+      <details>
+        <summary>Which devices does Vocablo support?</summary>
+        <p>Vocablo runs natively on iPhone and iPad (widgets on the Home Screen and Lock Screen) and on Mac (widgets on the desktop). Progress syncs across all three via iCloud for Vocablo Plus subscribers.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="alt" id="download" style="text-align:center">
+    <div class="wrap">
+      <h2>Start learning at a glance.</h2>
+      <p class="lead" style="margin:10px auto 24px">Free to download. A minute to set up your first widget.</p>
+      <a class="btn" href="https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871">Download Vocablo on the App Store</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>© 2026 Luke Hollenback. Vocablo is an independent app, built by one person.</p>
+    <p><a href="#widgets">Widgets</a> · <a href="#practice">Practice</a> · <a href="#pricing">Pricing</a> · <a href="#faq">FAQ</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var promo = document.getElementById('promo');
+  var code = promo.dataset.code;
+  var expires = promo.dataset.expires;
+  if (!code || !expires) return;
+  // Hide starting the day AFTER the expiry date, in the visitor's timezone.
+  if (new Date() >= new Date(expires + 'T23:59:59')) return;
+  var link = document.getElementById('promo-link');
+  link.href = 'https://apps.apple.com/redeem?ctx=offercodes&id=6790215871&code=' + encodeURIComponent(code);
+  promo.hidden = false;
+})();
+</script>
+
+</body>
+</html>
