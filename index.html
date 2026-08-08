@@ -121,7 +121,7 @@ body{
   color:var(--ink);background:var(--bg);line-height:1.55;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
-img,video{max-width:100%;height:auto;display:block}
+img{max-width:100%;height:auto;display:block}
 a{color:var(--brand);text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 
@@ -157,12 +157,33 @@ nav.site a.cta,nav.site a.cta:hover{color:#fff}
 }
 .hero .actions{margin:28px 0 8px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .hero .platforms{color:var(--ink-2);font-size:.9rem;margin-top:10px}
-.hero-video{
-  margin:40px auto 0;max-width:960px;border-radius:var(--radius);overflow:hidden;
-  box-shadow:0 24px 60px rgba(0,0,0,.18);border:1px solid var(--line);
-  line-height:0;font-size:0;
+.hero{overflow:hidden}
+.shot-marquee{
+  --shot-w:clamp(150px,21vw,240px);
+  --shot-gap:20px;
+  margin:22px 0 -16px;
+  width:100vw;margin-left:calc(50% - 50vw);
+  overflow:hidden;line-height:0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);
 }
-.hero-video video{width:100%;height:auto}
+.shot-marquee .track{
+  display:flex;gap:var(--shot-gap);width:max-content;
+  padding:22px calc(var(--shot-gap) / 2) 56px;
+  animation:shot-scroll 54s linear infinite;
+  will-change:transform;
+}
+.shot-marquee:hover .track,
+.shot-marquee:focus-within .track{animation-play-state:paused}
+.shot-marquee img{
+  flex:none;width:var(--shot-w);max-width:none;height:auto;
+  border-radius:14px;border:1px solid var(--line);
+  box-shadow:0 16px 40px rgba(0,0,0,.16);
+}
+@keyframes shot-scroll{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(calc(-6 * (var(--shot-w) + var(--shot-gap))),0,0)}
+}
 
 section{padding:64px 0}
 section.alt{background:var(--bg-2)}
@@ -211,6 +232,8 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .btn:hover{transform:none}
+  .shot-marquee{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .shot-marquee .track{animation:none}
 }
 </style>
 </head>
@@ -239,10 +262,21 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
         <a class="btn ghost" href="#widgets">See how it works</a>
       </div>
       <p class="platforms">Free to start · iPhone, iPad &amp; Mac · No account required</p>
-      <div class="hero-video">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/video-poster.webp" width="1280" height="720" aria-label="Scrolling tour of Vocablo's app screens: learning words, widgets, on-device AI conversations, topics, examples, and practice games">
-          <source src="assets/scroll-loop.mp4" type="video/mp4">
-        </video>
+      <div class="shot-marquee" role="group" aria-label="Tour of Vocablo's app screens: learning words, widgets, on-device AI conversations, topics, word details, and practice games">
+        <div class="track">
+          <img src="assets/ios-1.webp" alt="Vocablo home screen showing 34 words learned, the Mexican Spanish phrase '¡aguas!' with its meaning and a cultural note, a practice streak, and the games list" width="640" height="1391" decoding="async">
+          <img src="assets/ios-2.webp" alt="Vocablo vocabulary widgets on an iPhone: a Home Screen widget showing 'ahorita' with its meaning and example, and a Lock Screen widget showing 'para'" width="640" height="1391" decoding="async">
+          <img src="assets/ios-3.webp" alt="On-device Apple Intelligence conversation practice in Spanish: chatting with Sofía, with per-turn coaching, points, and English translations" width="640" height="1391" decoding="async">
+          <img src="assets/ios-4.webp" alt="Vocablo's Topics screen listing all 13 topics, from Essentials and Colors &amp; Numbers to Social Phrases and Mexican Spanish" width="640" height="1391" decoding="async">
+          <img src="assets/ios-5.webp" alt="Vocablo word detail screen for 'ahorita', showing its definition, example sentence, and a cultural usage note" width="640" height="1391" decoding="async">
+          <img src="assets/ios-6.webp" alt="Matching practice game pairing Spanish words like 'rojo' and 'verde' with their English meanings" width="640" height="1391" decoding="async">
+          <img src="assets/ios-1.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+          <img src="assets/ios-2.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+          <img src="assets/ios-3.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+          <img src="assets/ios-4.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+          <img src="assets/ios-5.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+          <img src="assets/ios-6.webp" alt="" aria-hidden="true" width="640" height="1391" decoding="async">
+        </div>
       </div>
 
       <div class="split hero-split" id="widgets">
