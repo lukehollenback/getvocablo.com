@@ -46,7 +46,8 @@
   "offers": [
     { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Beginner words across four starter topics, with widgets and practice games." },
     { "@type": "Offer", "name": "Vocablo Plus Monthly", "price": "2.99", "priceCurrency": "USD", "description": "All 13 topics, every difficulty level, and iCloud sync across devices." },
-    { "@type": "Offer", "name": "Vocablo Plus Annual", "price": "14.99", "priceCurrency": "USD", "description": "All 13 topics, every difficulty level, and iCloud sync across devices. One-week free trial." }
+    { "@type": "Offer", "name": "Vocablo Plus Annual", "price": "14.99", "priceCurrency": "USD", "description": "All 13 topics, every difficulty level, and iCloud sync across devices. One-week free trial." },
+    { "@type": "Offer", "name": "Vocablo Plus Lifetime", "price": "39.99", "priceCurrency": "USD", "description": "One-time purchase. All 13 topics, every difficulty level, and iCloud sync across devices — forever." }
   ]
 }
 </script>
@@ -352,8 +353,20 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
             <li>iCloud sync across iPhone, iPad &amp; Mac</li>
             <li>Also available at $2.99/month</li>
           </ul>
-          <div class="promo" id="promo" hidden data-code="2PARANUEVOS" data-expires="2026-12-31">
-            <a class="btn" id="promo-link" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6790215871&amp;code=">🎁 Redeem 2 months free</a>
+          <div class="promo" hidden data-code="2PARANUEVOS" data-expires="2026-12-31">
+            <a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6790215871&amp;code=">🎁 Redeem 2 months free</a>
+          </div>
+        </div>
+        <div class="price-card">
+          <h3>Lifetime</h3>
+          <p class="price">$39.99<span> once</span></p>
+          <ul>
+            <li>Everything in Vocablo Plus, forever</li>
+            <li>One purchase — no subscription</li>
+            <li>Yours on iPhone, iPad &amp; Mac</li>
+          </ul>
+          <div class="promo" hidden data-code="CHIDO15" data-expires="2026-12-31">
+            <a class="btn" href="https://apps.apple.com/redeem?ctx=offercodes&amp;id=6790215871&amp;code=">🎁 Unlock for $24.99</a>
           </div>
         </div>
       </div>
@@ -369,7 +382,7 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
       </details>
       <details>
         <summary>Is Vocablo free?</summary>
-        <p>Yes. The free tier includes beginner words across four starter topics, with widgets and practice games. Vocablo Plus ($2.99/month or $14.99/year with a one-week free trial) unlocks all 13 topics, every difficulty level, and iCloud sync across devices.</p>
+        <p>Yes. The free tier includes beginner words across four starter topics, with widgets and practice games. Vocablo Plus ($2.99/month or $14.99/year with a one-week free trial) unlocks all 13 topics, every difficulty level, and iCloud sync across devices. Prefer to pay once? A lifetime unlock is $39.99 — no subscription.</p>
       </details>
       <details>
         <summary>How is Mexican Spanish different from other Spanish?</summary>
@@ -408,15 +421,16 @@ footer.site .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:
 
 <script>
 (function () {
-  var promo = document.getElementById('promo');
-  var code = promo.dataset.code;
-  var expires = promo.dataset.expires;
-  if (!code || !expires) return;
-  // Hide starting the day AFTER the expiry date, in the visitor's timezone.
-  if (new Date() >= new Date(expires + 'T23:59:59')) return;
-  var link = document.getElementById('promo-link');
-  link.href = 'https://apps.apple.com/redeem?ctx=offercodes&id=6790215871&code=' + encodeURIComponent(code);
-  promo.hidden = false;
+  document.querySelectorAll('.promo[data-code]').forEach(function (promo) {
+    var code = promo.dataset.code;
+    var expires = promo.dataset.expires;
+    if (!code || !expires) return;
+    // Hide starting the day AFTER the expiry date, in the visitor's timezone.
+    if (new Date() >= new Date(expires + 'T23:59:59')) return;
+    var link = promo.querySelector('a.btn');
+    link.href = 'https://apps.apple.com/redeem?ctx=offercodes&id=6790215871&code=' + encodeURIComponent(code);
+    promo.hidden = false;
+  });
 })();
 </script>
 
