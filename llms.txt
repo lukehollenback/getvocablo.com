@@ -26,3 +26,6 @@
 
 - Homepage: https://getvocablo.com/
 - App Store: https://apps.apple.com/app/vocablo-learn-mexican-spanish/id6790215871
+- Privacy policy: https://getvocablo.com/legal/privacy.txt
+- Terms of use (Apple standard EULA):
+  https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
