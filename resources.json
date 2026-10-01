@@ -3,16 +3,6 @@
   "version": 1,
   "resources": [
     {
-      "id": "spanishdict",
-      "url": "https://www.spanishdict.com",
-      "icon": "https://getvocablo.com/resource-icons/spanishdict.png",
-      "title": "SpanishDict",
-      "description": {
-        "en-US": "Dictionary, conjugation tables, and grammar lessons — a great companion for looking words up in depth.",
-        "es-MX": "Diccionario, tablas de conjugación y lecciones de gramática."
-      }
-    },
-    {
       "id": "r-spanishlearning",
       "url": "https://www.reddit.com/r/SpanishLearning/",
       "icon": "https://getvocablo.com/resource-icons/spanishlearning.png",
